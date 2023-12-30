@@ -1,0 +1,25 @@
+.imagesGallery{
+    display: flex;
+}
+
+.imgGallery{
+    width: 45%;
+    margin:2.5%;
+    border-radius: 20px;
+}
+
+.grImagesGallery{
+    display: flex;
+    width: 50%;
+}
+
+@media screen and (max-width:640px) {
+    .imagesGallery{
+        display: block;
+    }
+    .imgGallery{
+        width: 90%;
+        margin:2.5%;
+        border-radius: 20px;
+    }
+}

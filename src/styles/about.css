@@ -1,0 +1,46 @@
+.superClass{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-family: kaisei Decol;
+    color:#91B6BC;
+    text-align: center;
+}
+.aboutDiv{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+.aboutImg{
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.aboutP{
+   font-size: 20px;
+   margin-left: 15px;
+   margin-top: 20px;
+}
+
+@media screen and (max-width:640px){
+    .superClass{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family: kaisei Decol;
+        color:#91B6BC;
+        text-align: center;
+    }
+    .aboutDiv{
+        display: block;
+    }
+    .aboutImg{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .aboutP{
+        font-size: 14px;
+        margin-left: 0px;
+        margin-top: 0px;
+     }
+}

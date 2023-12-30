@@ -1,0 +1,129 @@
+.footer{
+    background-color: #91B6BC;
+    margin-top: 2%;
+    width: 100%;
+    color: white;
+}
+
+.div_footer{
+    display: flex;
+}
+
+.menuFooter{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    margin-top: 1%;
+    margin-left: 4%;
+    width:20%;
+    font-family: kaisei Decol;
+}
+
+.contactFooter{
+    width:40%;
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 5%;
+}
+
+.Footer_title{
+    text-align: center;
+    font-family: kaisei Decol;
+    font-size: 40px;
+    margin-bottom: 2%;
+}
+
+.contactFooter_p{
+    text-align: left;
+    font-size: 18px;
+}
+
+.phoneFooter_a,.emailFooter_a{
+display: flex;
+margin: 3%;
+margin-left: 0%;
+}
+
+.phoneFooter_img,.emailFooter_img{
+    width: 20px;
+    height: 20px;
+    margin-right: 2%;
+}
+
+.socialMediaFooter{
+    margin-top: 1%;
+    margin-left:5%;
+}
+
+.socialMediaFooter_a{
+    display: flex;
+    margin-top: 5%;
+}
+
+.socialMediaFooter_img{
+    width: 20px;
+    height: 20px;
+    margin-right: 3%;
+}
+
+.copyRight{
+    margin-top: 3%;
+    text-align: center;
+}
+
+@media screen and (max-width:640px) {
+    .div_footer{
+        display: block;
+    }
+    .menuFooter{
+        display: none;
+    }
+    .contactFooter{
+        width:95%;
+       margin: auto;
+    }
+    .Footer_title{
+        text-align: center;
+        font-family: kaisei Decol;
+        font-size: 30px;
+        margin-bottom: 2%;
+    }
+    .contactFooter_p{
+        text-align: left;
+        font-size: 15px;
+    }
+    
+    .phoneFooter_a,.emailFooter_a{
+    display: flex;
+    margin: 3%;
+    margin-left: 5%;
+    }
+    
+    .phoneFooter_img,.emailFooter_img{
+        width: 20px;
+        height: 20px;
+        margin-right: 2%;
+    }
+    
+    .socialMediaFooter{
+        margin-top: 1%;
+        margin-left:5%;
+    }
+    
+    .socialMediaFooter_a{
+        display: flex;
+        margin-top: 5%;
+    }
+    
+    .socialMediaFooter_img{
+        width: 20px;
+        height: 20px;
+        margin-right: 3%;
+    }
+    
+    .copyRight{
+        margin-top: 5%;
+        text-align: center;
+        font-size: 10px;
+    }
+}

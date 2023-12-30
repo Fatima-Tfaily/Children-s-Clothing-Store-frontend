@@ -1,0 +1,100 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.google.com/specimen/Kaisei+Decol?query=Kaisei');
+@import url('https://fonts.google.com/specimen/Imperial+Script?query=Imperial+Script');
+.navbar{
+    background-color:#91B6BC ;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    height: 30px;
+}
+
+.navEmail,.navPhone,.navInsta,.navFace{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    margin-right: 100px;
+    margin-left: 15px;
+    padding-top: 5px;
+}
+
+.navTik{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    margin-right: 0px;
+    margin-left: 5px;
+    padding-top: 5px;
+}
+
+.navUser{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    margin-left: 130px;
+    padding-top: 5px;
+}
+
+.nEmail,.nPhone,.nInsta,.nFace,.nTik,.nUser{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.n_p_email,.n_p_phone,.n_p_insta,.n_p_face,.n_p_tik,.n_p_user{
+    margin-top: 2%;
+    display: block;
+}
+
+.n_email:hover,.n_phone:hover,.n_insta:hover,.n_face:hover,.n_tik:hover,.n_user:hover{
+    transform: scale(1.2);
+}
+
+.n_email,.n_phone,.n_insta,.n_face,.n_tik,.n_user{
+    display: flex;
+}
+
+.secondImage{
+    margin-top: 10px;
+    width:100%;
+}
+ 
+@media screen and (max-width:640px) {
+    .navbar{
+        height: 25px;
+    }
+    .n_p_email,.n_p_phone,.n_p_insta,.n_p_face,.n_p_tik,.n_p_user{
+        display: none;
+        width:0px
+    } 
+    .nEmail,.nPhone,.nInsta,.nFace,.nTik,.nUser{
+        width: 15px;
+        height: 15px;
+        margin-right: 3px;
+    }
+    .navUser{
+        display: flex;
+        flex-direction: row;
+        font-size: 10px;
+        margin-left: 45px;
+        padding-top: 5px;
+    }
+    .navEmail,.navPhone,.navInsta,.navFace{
+        display: flex;
+        flex-direction: row;
+        font-size: 10px;
+        margin-right: 45px;
+        margin-left: 5px;
+        padding-top: 5px;
+    }
+    .navTik{
+        display: flex;
+        flex-direction: row;
+        font-size: 10px;
+        margin-right: 0px;
+        margin-left: 5px;
+        padding-top: 5px;
+    }
+}

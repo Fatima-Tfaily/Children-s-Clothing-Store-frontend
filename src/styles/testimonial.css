@@ -1,0 +1,127 @@
+.testimonial{
+    width:100%;
+    margin-top:10px;
+    padding-left: 10px;
+    background-color:#f0f0f0 ;
+}
+
+.superClass{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-family: kaisei Decol;
+    color:#91B6BC;
+    text-align: center;
+}
+
+.testimonialDiv{
+    display: flex;
+}
+
+.firstImage{
+    margin-left:5%;
+    margin-right: 5%;
+    width:30%
+}
+
+.testFirstImage{
+    width:100%;
+    height:80%;
+    margin: auto;
+}
+
+.testimonialContent{
+    margin-top:10px;
+}
+
+.scdImage{
+    margin-left:5%;
+    margin-right: 5%;
+    width:30%
+}
+
+.testUser{
+    display: flex;
+    margin-top: 5%;
+}
+
+.testCircle{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #91B6BC ;
+}
+
+.testimonialImg{
+    width:30px;
+    height: 30px;
+    margin: 5px;
+}
+
+.test_user{
+    margin-left:2%;
+    font-size: 25px;
+}
+
+.testimonialContent{
+    font-size: 20px;
+}
+
+@media screen and (max-width:640px){
+    .superClass{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family: kaisei Decol;
+        color:#91B6BC;
+        text-align: center;
+    }
+    
+    .firstImage{
+        margin-left:2%;
+        margin-right: 5%;
+        width:40%
+    }
+    
+    .testFirstImage{
+        width:100%;
+        height:80%;
+        margin: auto;
+    }
+    
+    .testimonialContent{
+        margin-top:10px;
+    }
+    
+    .scdImage{
+        display: none;
+    }
+    
+    .testUser{
+        display: flex;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    .testCircle{
+        width:30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #91B6BC ;
+    }
+    
+    .testimonialImg{
+        width:20px;
+        height: 20px;
+        margin: 5px;
+    }
+    
+    .test_user{
+        margin-left:2%;
+        font-size: 20px;
+    }
+    
+    .testimonialContent{
+        font-size: 15px;
+    }
+}
