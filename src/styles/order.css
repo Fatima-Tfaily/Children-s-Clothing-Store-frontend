@@ -1,0 +1,33 @@
+.titleDashboard{
+    font-size: 30px;
+    margin:3%;
+}
+
+.OrdersDashboard{
+    width: 90%;
+    border:2px solid #91B6BC;
+    margin: auto;
+}
+
+.trOrders{
+    border: 1px solid #91B6BC;
+}
+
+.thOrders,.tdOrders{
+    border: 1px solid #91B6BC;
+    text-align: center;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.imgOrderDashboard{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+}
+
+.imgDeleteDashboard{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}

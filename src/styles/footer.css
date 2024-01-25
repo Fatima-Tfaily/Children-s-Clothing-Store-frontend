@@ -3,6 +3,7 @@
     margin-top: 2%;
     width: 100%;
     color: white;
+    flex-shrink: 0;
 }
 
 .div_footer{

@@ -11,12 +11,12 @@ const Footer = () => {
     <div className="footer">
       <div className="div_footer">
         <div className="menuFooter">
-          <a href="#">Home</a>
-          <a href="#">Categories</a>
-          <a href="#">Product</a>
-          <a href="#">Contact Us</a>
-          <a href="#">AboutUs</a>
-          <a href="#">Top Brands</a>
+          <a href="/">Home</a>
+          <a href="/Products">Products</a>
+          <a href="/Girls">Girls</a>
+          <a href="/Boys">Boys</a>
+          <a href="/Contact">Contact Us</a>
+          <a href="/Carts">Carts</a>
         </div>
         <div className="contactFooter">
           <h2 className="Footer_title">Contact</h2>
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyRight">
-        <a className="copyRight_a">
+        <a className="copyRight_a" href="/Dashboard">
           © Copyrights 2023.Mini Fashion.All Rights Reserved.
         </a>
       </div>

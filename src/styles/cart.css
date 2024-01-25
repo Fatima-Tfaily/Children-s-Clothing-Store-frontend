@@ -1,0 +1,29 @@
+.mainboxcart{
+    margin-top: 2%;
+    margin-left: 3%;
+    width:100%;
+}
+
+.blues{
+    padding-right: 3%;
+}
+
+.cartable{
+    width: 80%;
+}
+
+.h1Blues{
+    margin-bottom: 3%;
+}
+
+.checkout{
+    background-color: #91B6BC;
+    border-radius: 20px;
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+
+.totalPrice{
+    padding-top: 3%;
+}

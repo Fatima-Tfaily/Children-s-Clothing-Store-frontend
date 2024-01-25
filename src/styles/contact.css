@@ -1,0 +1,213 @@
+.divContact{
+    display: flex;
+    flex-direction: row;
+}
+
+.AboutContact{
+    margin-left: 3%;
+}
+
+.EmailContact,.CallContact,.TimingContact{
+    margin-top: 3%;
+    display: flex;
+}
+
+.CallContact,.TimingContact{
+    margin-top: 10%;
+}
+
+.LignDivEmail,.LignDivCall,.LignDivTiming{
+    width: 60px;
+    height: 60px;
+    border: 2px solid #91B6BC;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.GreenDivEmail,.GreenDivCall,.GreenDivTiming{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: #91B6BC;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.DivIconEmail,.DivIconCall,.DivIconTiming{
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    align-items: center;
+}
+
+.HEmail,.HCall,.HTiming{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.AEmail,.ACall,.ATiming{
+    color:#696969;
+    text-align: center;
+}
+
+.ImageContact{
+    margin-left: 5%;
+}
+
+.imageContact{
+    width: 400px;
+}
+
+.FormContact{
+    width:35%;
+    margin-left: 2%;
+    border: 1px solid #91B6BC;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.InputFormContact{
+    width:90%;
+    height: 50px;
+    border: 1px solid #91B6BC;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color:#696969;
+    padding-left: 2%;
+}
+
+.textAreaContact{
+    width:90%;
+    height: 50px;
+    border: 1px solid #91B6BC;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color:#696969;
+    padding-left: 2%;
+    resize: none;
+    padding-top: 2%;
+}
+
+.SubmitFormContact{
+    background-color: #91B6BC;
+    color: white;
+    font-size: 30px;
+    width:30%;
+    border-radius: 30px;
+    align-items: left;
+    margin-bottom: 2%;
+}
+
+@media screen and (max-width:700px) {
+    .divContact{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .AboutContact{
+        margin-left: 3%;
+    }
+    
+    .EmailContact,.CallContact,.TimingContact{
+        margin-top: 3%;
+        display: flex;
+    }
+    
+    .CallContact,.TimingContact{
+        margin-top: 10%;
+    }
+    
+    .LignDivEmail,.LignDivCall,.LignDivTiming{
+        width: 50px;
+        height: 50px;
+        border: 2px solid #91B6BC;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .GreenDivEmail,.GreenDivCall,.GreenDivTiming{
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        background-color: #91B6BC;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .DivIconEmail,.DivIconCall,.DivIconTiming{
+        height: 20px;
+        width: 20px;
+        margin: auto;
+        align-items: center;
+    }
+    
+    .HEmail,.HCall,.HTiming{
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .AEmail,.ACall,.ATiming{
+        color:#696969;
+        text-align: center;
+    }
+    
+    .ImageContact{
+       display: none;
+    }
+    
+    .imageContact{
+        width: 400px;
+    }
+    
+    .FormContact{
+        width:90%;
+        margin-left: 5%;
+        border: 1px solid #91B6BC;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2%;
+        margin-top: 5%;
+    }
+    
+    .InputFormContact{
+        width:90%;
+        height: 40px;
+        border: 1px solid #91B6BC;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        color:#696969;
+        padding-left: 2%;
+    }
+    
+    .SubmitFormContact{
+        background-color: #91B6BC;
+        color: white;
+        font-size: 20px;
+        width:30%;
+        border-radius: 30px;
+        align-items: left;
+        margin-bottom: 5%;
+    }
+    
+}

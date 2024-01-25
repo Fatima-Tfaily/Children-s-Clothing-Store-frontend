@@ -1,0 +1,137 @@
+ .login,.signup{
+        background-color: #91B6BC;
+        display: flex;      
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+     }
+ 
+     .titleLogin{
+      margin-top: 5%;
+      font-size: 30px;
+      text-align: center;
+     }
+  
+  .cart {
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .contentCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .emailLogin,.passwordLogin{
+    width: 90%;
+    height: 50px;
+    border: 1px solid #91B6BC;
+    margin-top: 4%;
+    margin-bottom: 10px;
+    padding-left: 3px;
+  }
+
+  .emailSignup,.passwordSignup,.confirmPassword,.fullNameSignup,.phoneNumberSignup{
+    width: 90%;
+    height: 30px;
+    border: 1px solid #91B6BC;
+    margin-top: 2%;
+    margin-bottom: 10px;
+    padding-left: 3px;
+  }
+
+  .contentCart .LoginButton{
+    width: 90%;
+    height: 50px;
+    background-color:  #91B6BC;
+    color: white;
+    margin-top: 4%;
+    border: 2px solid #91B6BC;
+  }
+  
+  .contentCart .SignupButton{
+    width: 90%;
+    height: 40px;
+    background-color:  #91B6BC;
+    color: white;
+    margin-top: 2%;
+    border: 2px solid #91B6BC;
+  }
+
+  .aSignup,.aLogin{
+    color: #91B6BC;
+  }
+
+  .error-message{
+    color: red;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width:700px){
+    .login,.signup{
+        background-color: #91B6BC;
+        display: flex;      
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+     }
+
+.titleLogin{
+    margin-top: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.cart {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .contentCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .emailLogin,.passwordLogin{
+    width: 90%;
+    height: 50px;
+    border: 1px solid #91B6BC;
+    margin-top: 6%;
+    margin-bottom: 10px;
+    padding-left: 3px;
+    font-size: 15px;
+  }
+
+  .emailSignup,.passwordSignup,.confirmPassword,.fullNameSignup,.phoneNumberSignup{
+    width: 90%;
+    height: 30px;
+    border: 1px solid #91B6BC;
+    margin-top: 4%;
+    margin-bottom: 10px;
+    padding-left: 3px;
+  }
+
+  .buttonLogin,.buttonSignup{
+    width: 90%;
+    height: 50px;
+    background-color:  #91B6BC;
+    color: white;
+    margin-top: 6%;
+  }
+
+  .aSignup,.aLogin{
+    color: #91B6BC;
+  }
+  }

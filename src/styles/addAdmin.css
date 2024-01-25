@@ -1,0 +1,31 @@
+.addAdminForm{
+    display: flex;
+}
+
+.addAdminForm{
+    display: block;
+    width:50%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #91B6BC;
+    text-align: center;
+}
+
+.fullNameAddAdmin,.emailAddAdmin,.passwordAddAdmin,.confirmPasswordAddAdmin,.phoneNumberAddAdmin{
+    width:90%;
+    margin: 2%;
+    height: 50px;
+    box-shadow: 2px 2px 3px 0px #909090;
+}
+
+.AddAdminButton{
+    width:30%;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #91B6BC;
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

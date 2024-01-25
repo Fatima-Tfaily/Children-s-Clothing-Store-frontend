@@ -1,0 +1,32 @@
+.navDashboard{
+    background-color: #91B6BC;
+    width: 25%;
+    height:auto;
+    padding-left: 2%;
+    padding-top: 2%;
+    color: white;
+}
+
+.contentDashboard{
+    width: 100%;
+}
+
+.titleDashboard{
+    font-size: 25px;
+    margin-bottom: 3%;
+}
+
+.liDashboard{
+    width:80%;
+    height: 50px;
+    background-color: white;
+    color:#91B6BC;
+    margin: 8%;
+    text-align: center;
+    padding: auto;
+    font-size: 22px;
+}
+
+.dashboard{
+    display: flex;
+}
