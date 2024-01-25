@@ -101,7 +101,7 @@ const Contact = () => {
           />
           <input className="SubmitFormContact" type="submit" value="Submit" />
         </form>
-        <ToastContainer />;
+        <ToastContainer />
       </div>
       <Footer />
     </div>

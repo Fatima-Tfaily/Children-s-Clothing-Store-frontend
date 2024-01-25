@@ -17,7 +17,7 @@ const EditProduct = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/products/getProductById/${productId}`
+          `https://minifashion-backend.onrender.com/products/getProductById/${productId}`
         );
         // Set the initial state with the fetched data
         setProduct(response.data);
@@ -41,7 +41,7 @@ const EditProduct = () => {
   const handleSaveChanges = async () => {
     try {
       await axios.put(
-        `http://localhost:8000/products/update/${productId}`,
+        `https://minifashion-backend.onrender.com/update/${productId}`,
         product
       );
       history.push("/products"); // Redirect to the product list page after a successful update

@@ -4,8 +4,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import Cart from "../images/icons8-shopping-bag-50.png";
-import Favorite from "../images/icons8-favorite-50.png";
 
 const Girls = () => {
   const [products, setProducts] = useState([]);
@@ -42,10 +40,7 @@ const Girls = () => {
             <h2 className="price-product">{product.price}$</h2>
             <div className="iconsProduct">
               <div className="cartDiv">
-                <img className="imgCart" src={Cart} alt="pic" />
-              </div>
-              <div className="favoriteDiv">
-                <img className="imgFavorite" src={Favorite} alt="pic" />
+                <button className="buttonCart">Add To Cart</button>
               </div>
             </div>
           </div>

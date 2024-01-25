@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="div_footer">
         <div className="menuFooter">
           <a href="/">Home</a>
-          <a href="/Products">Products</a>
+          <a href="/AllProducts">Products</a>
           <a href="/Girls">Girls</a>
           <a href="/Boys">Boys</a>
           <a href="/Contact">Contact Us</a>
