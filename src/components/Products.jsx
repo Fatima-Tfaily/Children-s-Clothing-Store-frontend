@@ -50,7 +50,7 @@ const Products = () => {
   return (
     <div className="allProductsDashboard">
       <h1 className="titleDashboard">All Products</h1>
-      <ToastContainer /> {/* Include the ToastContainer here */}
+      <ToastContainer />
       <div className="ProductsDashboard">
         {products.map((product, index) => (
           <div className="productDashboard" key={product.productId}>

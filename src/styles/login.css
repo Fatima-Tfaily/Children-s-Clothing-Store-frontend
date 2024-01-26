@@ -6,7 +6,7 @@
         height: 100vh;
      }
  
-     .titleLogin{
+  .titleLogin{
       margin-top: 5%;
       font-size: 30px;
       text-align: center;
@@ -55,6 +55,12 @@
     border: 2px solid #91B6BC;
   }
   
+  .contentCart .LoginButton:hover{
+    background-color: white;
+    color: #91B6BC;
+    font-size: 30px;
+  }
+
   .contentCart .SignupButton{
     width: 90%;
     height: 40px;
@@ -62,6 +68,12 @@
     color: white;
     margin-top: 2%;
     border: 2px solid #91B6BC;
+  }
+
+  .contentCart .SignupButton:hover{
+    background-color: white;
+    color: #91B6BC;
+    font-size: 25px;
   }
 
   .aSignup,.aLogin{
@@ -82,56 +94,60 @@
         height: 100vh;
      }
 
-.titleLogin{
+    .titleLogin{
     margin-top: 5%;
     font-size: 30px;
     text-align: center;
-}
+     }
 
-.cart {
+    .cart {
     width: 80%;
-    height: 80%;
+    height: 70%;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 20px;
-  }
+     }
   
-  .contentCart{
+    .contentCart{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+     }
 
-  .emailLogin,.passwordLogin{
+    .emailLogin,.passwordLogin{
     width: 90%;
     height: 50px;
     border: 1px solid #91B6BC;
-    margin-top: 6%;
+    margin-top: 10%;
     margin-bottom: 10px;
     padding-left: 3px;
     font-size: 15px;
-  }
+    }
 
-  .emailSignup,.passwordSignup,.confirmPassword,.fullNameSignup,.phoneNumberSignup{
+    .emailSignup,.passwordSignup,.confirmPassword,.fullNameSignup,.phoneNumberSignup{
     width: 90%;
     height: 30px;
     border: 1px solid #91B6BC;
     margin-top: 4%;
     margin-bottom: 10px;
     padding-left: 3px;
-  }
+    }
 
-  .buttonLogin,.buttonSignup{
+   .buttonLogin,.buttonSignup{
     width: 90%;
     height: 50px;
     background-color:  #91B6BC;
     color: white;
     margin-top: 6%;
-  }
+    }
+   
+   .pLogin{
+    display: flex;
+   }
 
-  .aSignup,.aLogin{
+   .aSignup,.aLogin{
     color: #91B6BC;
-  }
+   }
   }

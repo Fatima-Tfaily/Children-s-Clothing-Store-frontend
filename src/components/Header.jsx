@@ -1,11 +1,12 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import email from "../images/icons8-email-50 (1).png";
 import phone from "../images/icons8-phone-50 (1).png";
 import instagram from "../images/icons8-instagram-32.png";
 import facebook from "../images/icons8-facebook-50.png";
 import tiktok from "../images/icons8-tiktok-50.png";
-import user from "../images/icons8-user-50.png";
 import "../styles/style.css";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   let Links = [
@@ -18,6 +19,20 @@ const Header = () => {
   ];
 
   let [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const isAuthenticated = useMemo(() => {
+    return !!Cookies.get("authToken"); // Check if the authentication token exists
+  }, []);
+
+  const handleLogout = () => {
+    const allCookies = Cookies.get();
+    Object.keys(allCookies).forEach((cookieName) => {
+      Cookies.remove(cookieName);
+    });
+
+    navigate("/Login");
+  };
 
   return (
     <div>
@@ -56,7 +71,7 @@ const Header = () => {
       <div className="shadow-md bg-white p-2 border border-customBlue sm:h-12">
         <div className="flex flex-row">
           <div className="flex flex-row">
-            <a href="/Home">
+            <a href="/">
               <p className="text-customBlue font-imperial pl-5 text-7xl sm:text-m sm:pl-0">
                 Mini Fashion
               </p>
@@ -77,7 +92,7 @@ const Header = () => {
                 }`}
               >
                 {Links.map((link) => (
-                  <li key={link.name} className="md:ml-8 text-xl md:my-0 my-7">
+                  <li key={link.name} className="md:ml-10 text-xl md:my-0 my-7">
                     <a
                       href={link.link}
                       className="hover:text-CustomBlue duration-500"
@@ -86,11 +101,17 @@ const Header = () => {
                     </a>
                   </li>
                 ))}
-                <li className="md:ml-16 text-xl md:my-0 my-7">
-                  <a href="/Login">
-                    <img className="nUser" src={user}></img>
-                  </a>
-                </li>
+                {isAuthenticated ? (
+                  <li className="md:ml-10 text-xl md:my-0 my-7">
+                    <a onClick={handleLogout} href="#">
+                      Logout
+                    </a>
+                  </li>
+                ) : (
+                  <li className="md:ml-10 text-xl md:my-0 my-7">
+                    <a href="/Login">Login</a>
+                  </li>
+                )}
               </ul>
             </div>
           </div>

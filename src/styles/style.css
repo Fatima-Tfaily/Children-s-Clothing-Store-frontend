@@ -66,18 +66,26 @@
     width:100%;
 }
  
+.aLogin{display: flex;}
+
+.pLogin{
+    margin: auto;
+    display: flex;
+}
+
 @media screen and (max-width:640px) {
     .navbar{
         height: 25px;
     }
-    .n_p_email,.n_p_phone,.n_p_insta,.n_p_face,.n_p_tik,.n_p_user{
+    .n_p_email,.n_p_phone,.n_p_insta,.n_p_face,.n_p_tik{
         display: none;
         width:0px
     } 
-    .nEmail,.nPhone,.nInsta,.nFace,.nTik,.nUser{
+    .nEmail,.nPhone,.nInsta,.nFace,.nTik{
         width: 15px;
         height: 15px;
         margin-right: 3px;
+        margin-left: 7px;
     }
     .navUser{
         display: flex;
@@ -99,7 +107,7 @@
         flex-direction: row;
         font-size: 10px;
         margin-right: 0px;
-        margin-left: 5px;
+        margin-left: 7px;
         padding-top: 5px;
     }
 }

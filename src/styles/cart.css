@@ -1,19 +1,31 @@
 .mainboxcart{
     margin-top: 2%;
-    margin-left: 3%;
+    margin-left: 0%;
     width:100%;
 }
 
-.blues{
-    padding-right: 3%;
+.thBluesName,.thBluesImage,.thBluesQuantity,.thBluesPrice,.thBluesRemove,.thBluesTprice{
+    width:12%;
+    text-align: center;
+}
+
+.thBluesDescription{
+    width: 20%;
+}
+
+.blues,.bluesDescription{
+    padding-right: 0%;
+    text-align: center;
 }
 
 .cartable{
-    width: 80%;
+    width: 100%;
+    margin-top: 2%; 
 }
 
 .h1Blues{
-    margin-bottom: 3%;
+    font-size: 30px;
+    margin-left: 2%;
 }
 
 .checkout{
@@ -26,4 +38,120 @@
 
 .totalPrice{
     padding-top: 3%;
+    padding-left: 2%;
+}
+
+.blues img{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+
+.delete .imgDelete{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.checkout:hover{
+    background-color: white;
+    color: #91B6BC;
+    border: 1px solid #91B6BC;
+}
+
+.messageLogin{
+    display: flex;
+    margin-bottom: 3%;
+    margin-left: 2%;
+}
+
+.h2Modal{
+    margin-top: 35%;
+    margin-bottom: 5%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.inputModal{
+    border:1px solid #91B6BC;
+    margin-top: 3%;
+    height: 30px;
+}
+
+.buttonModal{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 5%;
+    background-color: #91B6BC;
+    color: white;
+}
+
+.buttonModal:hover{
+    background-color: white;
+    color: #91B6BC;
+    border: 1px solid #91B6BC;
+}
+
+@media screen and (max-width:640px){
+    .mainboxcart{
+        margin-top: 2%;
+        margin-left: 0%;
+        width:100%;
+    }
+    
+    .thBluesName,.thBluesQuantity,.thBluesPrice,.thBluesRemove,.thBluesTprice,.thBluesImage{
+        width:5%;
+        text-align: center;
+        font-size: 10px;
+    }
+    .thBluesDescription{
+        display: none;
+        width: 0px;
+    }
+    .bluesDescription{
+        display: none;
+        width: 0px;
+    }
+    .blues{
+        padding-right: 0%;
+        width: fit-content;
+        font-size: 13px;
+        margin:0% ;
+    }
+    
+    .cartable{
+        width: 100%;
+        margin:auto;
+    }
+    
+    .h1Blues{
+        font-size: 30px;
+    }
+    
+    .checkout{
+        background-color: #91B6BC;
+        border-radius: 20px;
+        color: white;
+        width: 100px;
+        height: 30px;
+    }
+    
+    .totalPrice{
+        padding-top: 3%;
+    }
+    
+    .blues img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .delete .imgDelete{
+        width: 20px;
+        height: 20px;
+    }
+   .messageLogin{
+    height: 19vh;
+    text-align: center;
+   }
 }

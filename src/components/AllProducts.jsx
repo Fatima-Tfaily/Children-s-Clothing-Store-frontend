@@ -1,15 +1,61 @@
 import React, { useEffect, useState } from "react";
-import "../styles/allProduct.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import Cookies from "js-cookie";
 import Header from "./Header";
 import Footer from "./Footer";
+import "react-toastify/dist/ReactToastify.css";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null); // Define selectedProduct
+  const [quantity, setQuantity] = useState(1); // Define quantity
+  const [price, setPrice] = useState("");
   const navigate = useNavigate();
+
+  const userId = Cookies.get("userId"); // Get userId from the cookie
+
+  const addToCart = async (productId) => {
+    try {
+      if (!selectedProduct || !selectedProduct.price) {
+        console.error("Invalid product or product price");
+        return;
+      }
+
+      const response = await axios.post(
+        "https://minifashion-backend.onrender.com/carts/add",
+        {
+          userId,
+          products: [
+            // Wrap the product object in an array
+            {
+              productId,
+              quantity,
+              price: selectedProduct.price,
+            },
+          ],
+          totalPrice: selectedProduct.price * quantity,
+        }
+      );
+
+      console.log("Add to Cart Response:", response);
+      toast.success("Product Added to cart !");
+
+      setSelectedProduct(null);
+      setQuantity(1);
+    } catch (error) {
+      console.error("Error adding to cart:", error);
+      toast.error("Error Added Product to Cart. Please try again.");
+    }
+  };
+
+  const handleAddToCart = (product) => {
+    setSelectedProduct(product);
+    addToCart(product.productId);
+  };
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -28,9 +74,11 @@ const AllProducts = () => {
 
     fetchProducts();
   }, []);
+
   return (
     <div className="allProducts">
       <Header />
+      <ToastContainer />
       <div className="Products">
         {products.map((product, index) => (
           <div className="product" key={product.productId}>
@@ -40,7 +88,12 @@ const AllProducts = () => {
             <h2 className="price-product">{product.price}$</h2>
             <div className="iconsProduct">
               <div className="cartDiv">
-                <button className="buttonCart">Add To Cart</button>
+                <button
+                  className="buttonCart"
+                  onClick={() => handleAddToCart(product)}
+                >
+                  Add To Cart
+                </button>
               </div>
             </div>
           </div>
