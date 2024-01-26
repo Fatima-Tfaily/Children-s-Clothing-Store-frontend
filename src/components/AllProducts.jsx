@@ -20,7 +20,12 @@ const AllProducts = () => {
 
   const addToCart = async (productId) => {
     try {
-      if (!selectedProduct || !selectedProduct.price) {
+      // Ensure selectedProduct is available and has a valid price
+      if (
+        !selectedProduct ||
+        !selectedProduct.price ||
+        isNaN(selectedProduct.price)
+      ) {
         console.error("Invalid product or product price");
         return;
       }
@@ -30,7 +35,6 @@ const AllProducts = () => {
         {
           userId,
           products: [
-            // Wrap the product object in an array
             {
               productId,
               quantity,
@@ -48,15 +52,14 @@ const AllProducts = () => {
       setQuantity(1);
     } catch (error) {
       console.error("Error adding to cart:", error);
-      toast.error("Error Added Product to Cart. Please try again.");
+      toast.error("Error adding product to cart. Please try again.");
     }
   };
 
   const handleAddToCart = (product) => {
     setSelectedProduct(product);
-    addToCart(product.productId);
+    addToCart(product._id);
   };
-
   useEffect(() => {
     const fetchProducts = async () => {
       try {
