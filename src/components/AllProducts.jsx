@@ -11,16 +11,20 @@ const AllProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedProduct, setSelectedProduct] = useState(null); // Define selectedProduct
-  const [quantity, setQuantity] = useState(1); // Define quantity
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
   const [price, setPrice] = useState("");
   const navigate = useNavigate();
 
-  const userId = Cookies.get("userId"); // Get userId from the cookie
+  const userId = Cookies.get("userId");
 
   const addToCart = async (productId) => {
     try {
-      // Ensure selectedProduct is available and has a valid price
+      if (!userId) {
+        toast.error("Please login to add a product to the cart.");
+        navigate("/login");
+        return;
+      }
       if (
         !selectedProduct ||
         !selectedProduct.price ||
@@ -29,7 +33,6 @@ const AllProducts = () => {
         console.error("Invalid product or product price");
         return;
       }
-
       const response = await axios.post(
         "https://minifashion-backend.onrender.com/carts/add",
         {

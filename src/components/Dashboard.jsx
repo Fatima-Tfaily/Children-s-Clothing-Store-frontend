@@ -7,7 +7,7 @@ import Orders from "./Orders";
 import Admins from "./Admins";
 import AddAdmins from "./AddAdmins";
 import Logout from "./Logout";
-import EditProduct from "./EditProduct";
+import AddProduct from "./AddProduct";
 import Cookies from "js-cookie";
 
 const ProtectedRoute = ({ element }) => {
@@ -36,6 +36,9 @@ const Dashboard = () => {
           </li>
           <li className="liDashboard">
             <Link to="">Products</Link>
+          </li>
+          <li className="liDashboard">
+            <Link to="addProduct">Add Product</Link>
           </li>
           <li className="liDashboard">
             <Link to="admins">Admins</Link>
@@ -72,8 +75,8 @@ const Dashboard = () => {
             element={<ProtectedRoute element={<Logout />} />}
           />
           <Route
-            path="products/edit/:productId"
-            element={<ProtectedRoute element={<EditProduct />} />}
+            path="addProduct"
+            element={<ProtectedRoute element={<AddProduct />} />}
           />
         </Routes>
       </div>

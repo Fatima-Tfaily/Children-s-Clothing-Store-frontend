@@ -8,12 +8,9 @@ import Dashboard from "./components/Dashboard";
 import Contact from "./components/Contact";
 import AllProducts from "./components/AllProducts";
 import Cart from "./components/Cart";
-import Profile from "./components/Profile";
-import ApproveProducts from "./components/ApproveProducts";
-import Error from "./components/Error";
-import Favorite from "./components/Favorite";
 import Girls from "./components/Girls";
 import Boys from "./components/Boys";
+import ProductsByCategory from "./components/ProductsByCategory";
 
 function App() {
   return (
@@ -24,14 +21,11 @@ function App() {
         <Route path="/Girls" element={<Girls />} />
         <Route path="/Boys" element={<Boys />} />
         <Route path="/Cart" element={<Cart />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/ApproveProducts" element={<ApproveProducts />} />
-        <Route path="/Favorite" element={<Favorite />} />
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
-        <Route path="/Error" element={<Error />} />
         <Route path="/Dashboard/*" element={<Dashboard />} />
+        <Route path="/Products/:categoryId" element={<ProductsByCategory />} />
       </Routes>
     </Router>
   );

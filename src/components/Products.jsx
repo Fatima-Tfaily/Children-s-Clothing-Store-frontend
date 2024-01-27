@@ -73,11 +73,6 @@ const Products = () => {
                   onClick={() => handleDelete(product.productId)}
                 />
               </div>
-              <div className="editDivDashboard">
-                <Link to={`/dashboard/products/edit/${product.productId}`}>
-                  <img className="imgEditDashboard" src={Edit} alt="pic" />
-                </Link>
-              </div>
             </div>
           </div>
         ))}

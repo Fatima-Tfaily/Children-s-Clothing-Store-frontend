@@ -1,16 +1,68 @@
 import React, { useEffect, useState } from "react";
 import "../styles/allProduct.css";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import Cookies from "js-cookie";
+import "react-toastify/dist/ReactToastify.css";
 
-const Girls = () => {
+const Boys = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [price, setPrice] = useState("");
   const navigate = useNavigate();
 
+  const userId = Cookies.get("userId");
+  const addToCart = async (productId) => {
+    try {
+      if (!userId) {
+        toast.error("Please login to add a product to the cart.");
+        navigate("/login");
+        return;
+      }
+      if (
+        !selectedProduct ||
+        !selectedProduct.price ||
+        isNaN(selectedProduct.price)
+      ) {
+        console.error("Invalid product or product price");
+        return;
+      }
+      const response = await axios.post(
+        "https://minifashion-backend.onrender.com/carts/add",
+        {
+          userId,
+          products: [
+            {
+              productId,
+              quantity,
+              price: selectedProduct.price,
+            },
+          ],
+          totalPrice: selectedProduct.price * quantity,
+        }
+      );
+
+      console.log("Add to Cart Response:", response);
+      toast.success("Product Added to cart !");
+
+      setSelectedProduct(null);
+      setQuantity(1);
+    } catch (error) {
+      console.error("Error adding to cart:", error);
+      toast.error("Error adding product to cart. Please try again.");
+    }
+  };
+
+  const handleAddToCart = (product) => {
+    setSelectedProduct(product);
+    addToCart(product._id);
+  };
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -28,9 +80,11 @@ const Girls = () => {
 
     fetchProducts();
   }, []);
+
   return (
     <div className="allProducts">
       <Header />
+      <ToastContainer />
       <div className="Products">
         {products.map((product, index) => (
           <div className="product" key={product.productId}>
@@ -40,7 +94,12 @@ const Girls = () => {
             <h2 className="price-product">{product.price}$</h2>
             <div className="iconsProduct">
               <div className="cartDiv">
-                <button className="buttonCart">Add To Cart</button>
+                <button
+                  className="buttonCart"
+                  onClick={() => handleAddToCart(product)}
+                >
+                  Add To Cart
+                </button>
               </div>
             </div>
           </div>
@@ -51,4 +110,4 @@ const Girls = () => {
   );
 };
 
-export default Girls;
+export default Boys;

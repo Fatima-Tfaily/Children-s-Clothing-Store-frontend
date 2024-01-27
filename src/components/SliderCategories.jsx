@@ -30,9 +30,9 @@ function CategoriesHome() {
     fetchCategories();
   }, []);
 
-  //const handleCategoryClick = (categoryName) => {
-  //navigate(`/product/product/categoryName/${categoryName}`);
-  //};
+  const handleCategoryClick = (categoryId) => {
+    navigate(`/Products/${categoryId}`);
+  };
 
   var settings = {
     dots: true,
@@ -92,7 +92,7 @@ function CategoriesHome() {
               <div
                 className="home-category"
                 key={category.categoryId}
-                // onClick={() => handleCategoryClick(category.categoryName)}
+                onClick={() => handleCategoryClick(category.categoryId)}
               >
                 <div className="border">
                   <img
