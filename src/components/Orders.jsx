@@ -27,6 +27,7 @@ function Orders() {
 
           // Assuming each order has multiple products
           const productPromises = order.products.map(async (product) => {
+            console.log(order.products);
             const productResponse = await axios.get(
               `https://minifashion-backend.onrender.com/products/getProductById/${product.product}`
             );
@@ -100,12 +101,14 @@ function Orders() {
                   <td className="tdOrders">
                     <img
                       className="imgOrderDashboard"
-                      src={product.productImage}
+                      src={product[0].productImage}
                       alt="pic"
                     />
                   </td>
                   <td className="tdOrders">
-                    <p className="p-productDashboard">{product.productName}</p>
+                    <p className="p-productDashboard">
+                      {product[0].productName}
+                    </p>
                   </td>
                   <td className="tdOrders">
                     <p className="p-productDashboard">{product.quantity}</p>

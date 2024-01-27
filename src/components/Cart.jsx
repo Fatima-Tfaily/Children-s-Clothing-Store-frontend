@@ -48,7 +48,6 @@ const Cart = () => {
         `https://minifashion-backend.onrender.com/carts/getCartsByUserId/${userId}`
       );
       const fetchedCartItems = response.data;
-
       const productsDetailsPromises = fetchedCartItems.map(async (item) => {
         const productDetailsResponse = await axios.get(
           `https://minifashion-backend.onrender.com/products/getProductById/${item.products[0].productId}`
@@ -68,6 +67,7 @@ const Cart = () => {
       );
 
       const updatedCartItems = fetchedCartItems.reduce((acc, item) => {
+        //console.log(productsQuantity[item.products[0].productId][0]);
         const productId = item.products[0].productId;
         const existingItem = acc.find(
           (cartItem) => cartItem.products[0].productId === productId
@@ -96,7 +96,7 @@ const Cart = () => {
       }
 
       const orderProducts = cartItems.map((item) => ({
-        product: item.products[0]._id,
+        product: item.products[0].productId,
         quantity: item.products[0].quantity,
         price: item.products[0].price,
       }));
@@ -117,8 +117,8 @@ const Cart = () => {
         "https://minifashion-backend.onrender.com/orders/add",
         orderData
       );
-      setOrderResponse(response);
 
+      setOrderResponse(response);
       if (response.status === 201) {
         window.alert("Order placed successfully!");
         setIsModalOpen(true);
@@ -179,55 +179,43 @@ const Cart = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {cartItems.map(
-                    (item, index) => (
-                      console.log(productsQuantity),
-                      console.log(
-                        productsQuantity[item.products[0].productId][0]
-                          .productName
-                      ),
-                      (
-                        <tr key={index}>
-                          <td className="blues">
-                            {
-                              productsQuantity[item.products[0].productId][0]
-                                ?.productName
-                            }
-                          </td>
-                          <td className="blues">
-                            <img
-                              src={
-                                productsQuantity[item.products[0].productId][0]
-                                  ?.productImage
-                              }
-                              alt="product"
-                            />
-                          </td>
-                          <td className="bluesDescription">
-                            {
-                              productsQuantity[item.products[0].productId][0]
-                                ?.description
-                            }
-                          </td>
-                          <td className="blues">{item.products[0].quantity}</td>
-                          <td className="blues">${item.products[0].price}</td>
-                          <td className="blues">
-                            {" "}
-                            $
-                            {item.products[0].quantity * item.products[0].price}
-                          </td>
-                          <td className="blues">
-                            <button
-                              className="delete"
-                              onClick={() => handleDeleteProduct(item._id)}
-                            >
-                              <img className="imgDelete" src={Delete} />
-                            </button>
-                          </td>
-                        </tr>
-                      )
-                    )
-                  )}
+                  {cartItems.map((item, index) => (
+                    <tr key={index}>
+                      <td className="blues">
+                        {productsQuantity[item.products[0].productId] &&
+                          productsQuantity[item.products[0].productId][0]
+                            ?.productName}
+                      </td>
+                      <td className="blues">
+                        <img
+                          src={
+                            productsQuantity[item.products[0].productId] &&
+                            productsQuantity[item.products[0].productId][0]
+                              ?.productImage
+                          }
+                          alt="product"
+                        />
+                      </td>
+                      <td className="bluesDescription">
+                        {productsQuantity[item.products[0].productId] &&
+                          productsQuantity[item.products[0].productId][0]
+                            ?.description}
+                      </td>
+                      <td className="blues">{item.products[0].quantity}</td>
+                      <td className="blues">${item.products[0].price}</td>
+                      <td className="blues">
+                        ${item.products[0].quantity * item.products[0].price}
+                      </td>
+                      <td className="blues">
+                        <button
+                          className="delete"
+                          onClick={() => handleDeleteProduct(item._id)}
+                        >
+                          <img className="imgDelete" src={Delete} />
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
                 <tfoot>
                   <tr>

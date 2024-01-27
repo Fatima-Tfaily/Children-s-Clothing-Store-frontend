@@ -47,7 +47,7 @@ const Admins = () => {
 
   return (
     <div className="allUsersDashboard">
-      <h1 className="titleDashboard">All Users</h1>
+      <h1 className="titleDashboard">All Admins</h1>
       <ToastContainer />
       <table className="UsersDashboard">
         <thead>

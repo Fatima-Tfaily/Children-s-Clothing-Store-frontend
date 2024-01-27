@@ -92,7 +92,7 @@ const AddProduct = () => {
             onChange={(e) => setProductImage(e.target.files[0])}
           />
           <textarea
-            className="passwordAddAdmin"
+            className="descriptionAddProduct"
             required
             value={description}
             placeholder="Enter Product Description"

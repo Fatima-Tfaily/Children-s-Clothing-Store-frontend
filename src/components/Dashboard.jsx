@@ -8,6 +8,8 @@ import Admins from "./Admins";
 import AddAdmins from "./AddAdmins";
 import Logout from "./Logout";
 import AddProduct from "./AddProduct";
+import Categories from "./Categoriess";
+import AddCategory from "./AddCategory";
 import Cookies from "js-cookie";
 
 const ProtectedRoute = ({ element }) => {
@@ -41,10 +43,19 @@ const Dashboard = () => {
             <Link to="addProduct">Add Product</Link>
           </li>
           <li className="liDashboard">
+            <Link to="/dashboard/categories">Categories</Link>
+          </li>
+          <li className="liDashboard">
+            <Link to="addCategory">Add Category</Link>
+          </li>
+          <li className="liDashboard">
             <Link to="admins">Admins</Link>
           </li>
           <li className="liDashboard">
             <Link to="addAdmins">Add Admins</Link>
+          </li>
+          <li className="liDashboard">
+            <Link to="/">Home</Link>
           </li>
           <li className="liDashboard">
             <Link to="logout">Logout</Link>
@@ -63,12 +74,20 @@ const Dashboard = () => {
           />
           <Route path="" element={<ProtectedRoute element={<Products />} />} />
           <Route
+            path="categories"
+            element={<ProtectedRoute element={<Categories />} />}
+          />
+          <Route
             path="admins"
             element={<ProtectedRoute element={<Admins />} />}
           />
           <Route
             path="addAdmins"
             element={<ProtectedRoute element={<AddAdmins />} />}
+          />
+          <Route
+            path="addCategory"
+            element={<ProtectedRoute element={<AddCategory />} />}
           />
           <Route
             path="logout"
