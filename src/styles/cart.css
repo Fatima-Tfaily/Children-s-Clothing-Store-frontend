@@ -66,8 +66,8 @@
 }
 
 .h2Modal{
-    margin-top: 35%;
-    margin-bottom: 5%;
+    margin-top: 15%;
+    margin-bottom: 3%;
     font-size: 25px;
     font-weight: bold;
 }
@@ -154,4 +154,26 @@
     height: 19vh;
     text-align: center;
    }
+
+   .h2Modal{
+    margin-top: 60%;
+    margin-bottom: 3%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.inputModal{
+    border:1px solid #91B6BC;
+    margin-top: 3%;
+    height: 30px;
+}
+
+.buttonModal{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 5%;
+    background-color: #91B6BC;
+    color: white;
+}
 }

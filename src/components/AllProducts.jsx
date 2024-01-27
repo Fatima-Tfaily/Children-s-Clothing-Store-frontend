@@ -30,7 +30,7 @@ const AllProducts = () => {
         !selectedProduct.price ||
         isNaN(selectedProduct.price)
       ) {
-        console.error("Invalid product or product price");
+        console.error("Invalid product or product price", selectedProduct);
         return;
       }
       const response = await axios.post(
@@ -61,14 +61,21 @@ const AllProducts = () => {
 
   const handleAddToCart = (product) => {
     setSelectedProduct(product);
-    addToCart(product._id);
   };
+
+  useEffect(() => {
+    if (selectedProduct) {
+      addToCart(selectedProduct._id);
+    }
+  }, [selectedProduct]);
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
           "https://minifashion-backend.onrender.com/products/getAllProducts"
         );
+        console.log("API Response:", response.data);
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching Products:", error);

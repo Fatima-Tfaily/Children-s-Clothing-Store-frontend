@@ -61,8 +61,14 @@ const Boys = () => {
 
   const handleAddToCart = (product) => {
     setSelectedProduct(product);
-    addToCart(product._id);
   };
+
+  useEffect(() => {
+    if (selectedProduct) {
+      addToCart(selectedProduct._id);
+    }
+  }, [selectedProduct]);
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {

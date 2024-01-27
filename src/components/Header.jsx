@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-import email from "../images/icons8-email-50 (1).png";
+import Email from "../images/icons8-email-50 (1).png";
 import phone from "../images/icons8-phone-50 (1).png";
 import instagram from "../images/icons8-instagram-32.png";
 import facebook from "../images/icons8-facebook-50.png";
@@ -9,6 +9,24 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const redirectToFacebook = () => {
+    window.open(
+      "https://www.facebook.com/fatimatfayli.tfayli?mibextid=ZbWKwL",
+      "_blank"
+    );
+  };
+
+  const redirectToInstagram = () => {
+    window.open(
+      "https://www.instagram.com/fatima.tfaylii?igsh=Yml6ZmI0cXpvcGx4",
+      "_blank"
+    );
+  };
+
+  const redirectToTiktok = () => {
+    window.open("https://www.tiktok.com/tiktok.com/@fatimatfayli443", "_blank");
+  };
+
   let Links = [
     { name: "Home", link: "/" },
     { name: "Products", link: "/AllProducts" },
@@ -34,35 +52,81 @@ const Header = () => {
     navigate("/Login");
   };
 
+  const [phoneNumber, setPhoneNumber] = useState("71153332");
+  const link = `https://wa.me/${phoneNumber}`;
+
+  const redirectToGmail = () => {
+    window.open("mailto:fatima.h.tfaily.com", "_blank");
+  };
+
+  const openChat = () => {
+    window.open(link, "_blank");
+  };
+
   return (
     <div>
       <div className="navbar">
         <div className="navEmail">
-          <a className="n_email">
-            <img className="nEmail" src={email} />
+          <a
+            className="n_email"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              redirectToGmail();
+            }}
+          >
+            <img className="nEmail" src={Email} />
             <p className="n_p_email">Mini.Fashion@gmail.com</p>
           </a>
         </div>
         <div className="navPhone">
-          <a className="n_phone">
+          <a
+            className="n_phone"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              openChat();
+            }}
+          >
             <img className="nPhone" src={phone}></img>
             <p className="n_p_phone">+961 71/153 332</p>
           </a>
         </div>
         <div className="navInsta">
-          <a className="n_insta">
+          <a
+            className="n_insta"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              redirectToInstagram();
+            }}
+          >
             <img className="nInsta" src={instagram}></img>
             <p className="n_p_insta">Mini Fashion</p>
           </a>
         </div>
         <div className="navFace">
-          <a className="n_face">
+          <a
+            className="n_face"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              redirectToFacebook();
+            }}
+          >
             <img className="nFace" src={facebook}></img>
             <p className="n_p_face">Mini Fashion</p>
           </a>
         </div>
         <div className="navTik">
-          <a className="n_tik">
+          <a
+            className="n_tik"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              redirectToTiktok();
+            }}
+          >
             <img className="nTik" src={tiktok}></img>
             <p className="n_p_tik">Mini Fashion</p>
           </a>

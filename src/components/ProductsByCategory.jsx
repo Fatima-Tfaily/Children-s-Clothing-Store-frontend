@@ -81,8 +81,13 @@ function ProductsByCategory() {
 
   const handleAddToCart = (product) => {
     setSelectedProduct(product);
-    addToCart(product._id);
   };
+
+  useEffect(() => {
+    if (selectedProduct) {
+      addToCart(selectedProduct._id);
+    }
+  }, [selectedProduct]);
 
   return (
     <div className="allProducts">
